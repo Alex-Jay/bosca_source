@@ -4,6 +4,7 @@ using TMPro;
 public class StrafeMovement : MonoBehaviour
 {
     public TMP_Text speedText;
+    public bool enableText = true;
 
     [SerializeField]
     private float accel = 200f;         // How fast the player accelerates on the ground
@@ -24,15 +25,18 @@ public class StrafeMovement : MonoBehaviour
     private GameObject camObj;
 
     private float lastJumpPress = -1f;
-    private float jumpPressDuration = 0.1f;
+    private readonly float jumpPressDuration = 0.1f;
 	private bool onGround = false;
     
 	private void Update()
     {
         int currentSpeed = (int) new Vector3(GetComponent<Rigidbody>().velocity.x, 0f, GetComponent<Rigidbody>().velocity.z).magnitude;
 
-        speedText.text = currentSpeed.ToString() + " m/s";
-
+        if (enableText)
+        {
+            speedText.text = currentSpeed.ToString() + " m/s";
+        }
+        
         if (Input.GetButton("Jump"))
 		{
 			lastJumpPress = Time.time;
