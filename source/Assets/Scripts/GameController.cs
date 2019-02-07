@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameController : MonoBehaviour
 {
     [HideInInspector]
     // Singleton instance of AudioManager
     // Can be accessed from any script
-    public static GameManager instance = null;
+    public static GameController instance = null;
 
     void Awake()
     {

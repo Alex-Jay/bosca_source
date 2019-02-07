@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23077956464729676}
   - component: {fileID: 65782959568580772}
   - component: {fileID: 114064005897062220}
+  - component: {fileID: 114840436970886464}
   m_Layer: 12
   m_Name: CubeWithOutline
   m_TagString: Draggable
@@ -111,3 +112,16 @@ MonoBehaviour:
   isHighlighted: 0
   outlineWidth: 6
   outlineColor: {r: 0.40174127, g: 1, b: 0, a: 1}
+--- !u!114 &114840436970886464
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1380180037875386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f020b5f8ddf74bb47a1f4d9626c2290a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 0}
+  currentHoldTimer: 0
