@@ -24,12 +24,17 @@ public class StrafeMovement : MonoBehaviour
     [SerializeField]
     private GameObject camObj;
 
+    [SerializeField]
+    private Vector2 input;
+
     private float lastJumpPress = -1f;
     private readonly float jumpPressDuration = 0.1f;
 	private bool onGround = false;
     
 	private void Update()
     {
+        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
         int currentSpeed = (int) new Vector3(GetComponent<Rigidbody>().velocity.x, 0f, GetComponent<Rigidbody>().velocity.z).magnitude;
 
         if (enableText)
@@ -45,8 +50,6 @@ public class StrafeMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
         // Get player velocity
         Vector3 playerVelocity = GetComponent<Rigidbody>().velocity;
         // Slow down if on ground

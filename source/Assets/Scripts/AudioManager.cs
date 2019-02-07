@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     {
         MainMenu,
         Level1,
+        Level2Prototype,
         SceneIndexCount
     }
 
@@ -67,8 +68,11 @@ public class AudioManager : MonoBehaviour
 
     void Start ()
     {
-        // Set initial music to be MainMum
-        GetAudioSource(AudioSourceIDs.Music).clip = menuMusic;
+        if(SceneManager.GetActiveScene().buildIndex == (int) SceneIndices.MainMenu)
+            GetAudioSource(AudioSourceIDs.Music).clip = menuMusic;
+        else
+            GetAudioSource(AudioSourceIDs.Music).clip = gameMusic;
+
 
         PlayMusic();
         UpdateVolumes();
@@ -133,12 +137,12 @@ public class AudioManager : MonoBehaviour
         UpdateVolumes();
 
         // Listen to SceneLoaded event
-        SceneManager.activeSceneChanged += onSwapMusic;
+        SceneManager.activeSceneChanged += OnSwapMusic;
     }
 
     #region Helper Functions
 
-    void onSwapMusic (Scene prevScene, Scene nextScene)
+    void OnSwapMusic (Scene prevScene, Scene nextScene)
     {
         SetMusicClip((MusicIDs)nextScene.buildIndex);
 
