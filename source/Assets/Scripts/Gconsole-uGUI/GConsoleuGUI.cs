@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using System.Collections;
 using System.Collections.Generic;
-using System;
+using TMPro;
 
 [AddComponentMenu("Scripts/Gconsole-uGUI/GConsoleuGUI")]
 public class GConsoleuGUI : MonoBehaviour
 {
 	public int max_OutputLength = 500; // If we put to much text in the textarea Unity will go nuts
-	public Text consoleOutput;
-	public InputField input;
+	//public Text _consoleOutput;
+    public TMP_Text consoleOutput;
+	//public InputField input;
+	public TMP_InputField input;
 	public GConsoleuGUISuggestion[] suggestions;
 	public bool clearOnSubmit = false;
 	public bool reselectOnSubmit = true;

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 /// <summary>
 /// Adds the quit command to the console, which closes the application (if in non-web non-editor build).

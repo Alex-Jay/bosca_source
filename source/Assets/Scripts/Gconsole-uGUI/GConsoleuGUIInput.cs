@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [AddComponentMenu("Scripts/Gconsole-uGUI/GConsoleuGUIInput")]
 public class GConsoleuGUIInput : MonoBehaviour
@@ -7,11 +8,12 @@ public class GConsoleuGUIInput : MonoBehaviour
 		[HideInInspector]
 		public GConsoleuGUI uGUI;
 		private string oldvalue;
-		private InputField input;
+		//private InputField input;
+		private TMP_InputField input;
 
 		void Start ()
 		{
-				input = GetComponent<InputField> ();
+				input = GetComponent<TMP_InputField> ();
 				input.onEndEdit.AddListener (onEndEdit);
 				input.onValueChanged.AddListener (onChangeEdit);
 		}

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
+using TMPro;
 
 [AddComponentMenu("Scripts/Gconsole-uGUI/GConsoleuGUISuggestion")]
 public class GConsoleuGUISuggestion : MonoBehaviour
@@ -8,12 +8,13 @@ public class GConsoleuGUISuggestion : MonoBehaviour
 	[HideInInspector]
 	public GConsoleuGUI uGUI;
 	[HideInInspector]
-	public Text label;
+	//public Text label;
+    public TMP_Text label;
 
 	void Start()
     {
 		GetComponent<Button> ().onClick.AddListener (OnClick);
-        label = GetComponentInChildren<Text>();        
+        label = GetComponentInChildren<TMP_Text>();        
 	}
 
     void OnClick()
