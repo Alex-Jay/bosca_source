@@ -16,14 +16,21 @@ public class ObjectDragger : MonoBehaviour
         // Do init
     }
 
-    void FixedUpdate ()
+    void Update ()
+    {
+        UpdateOutlineFromRaycast();
+
+    }
+
+    void UpdateOutlineFromRaycast ()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, interactionRadius, draggableLayers) )
+        // Enable outline if ray hits
+        if (Physics.Raycast(ray, out hit, interactionRadius, draggableLayers))
         {
-            Debug.DrawLine(transform.position, hit.point, Color.red);
+            hit.collider.gameObject.GetComponent<Highlightable>().isHighlighted = true;
         }
     }
 }

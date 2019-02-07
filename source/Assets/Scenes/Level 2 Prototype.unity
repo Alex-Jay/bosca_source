@@ -1740,7 +1740,6 @@ GameObject:
   - component: {fileID: 1536176000}
   - component: {fileID: 1536175999}
   - component: {fileID: 1536176003}
-  - component: {fileID: 1536175998}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1748,23 +1747,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1536175998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1536175997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f01e4c4d170ed43a848c9b3dcabaa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionRadius: 5
-  lineColor: {r: 0, g: 0, b: 0, a: 0}
-  lineWidth: 0.05
-  draggableLayers:
-    serializedVersion: 2
-    m_Bits: 4096
 --- !u!114 &1536175999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2692,7 +2674,7 @@ GameObject:
   - component: {fileID: 1885141427}
   - component: {fileID: 1885141426}
   - component: {fileID: 1885141425}
-  - component: {fileID: 1885141430}
+  - component: {fileID: 1885141431}
   m_Layer: 0
   m_Name: Player_Cam
   m_TagString: Untagged
@@ -2706,7 +2688,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1885141424}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -2791,7 +2773,7 @@ Transform:
   m_Father: {fileID: 1536176002}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1885141430
+--- !u!114 &1885141431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2802,9 +2784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f01e4c4d170ed43a848c9b3dcabaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRadius: 5
+  interactionRadius: 25
   lineColor: {r: 0, g: 0, b: 0, a: 0}
-  lineWidth: 0.2
+  lineWidth: 0.05
   draggableLayers:
     serializedVersion: 2
     m_Bits: 4096
